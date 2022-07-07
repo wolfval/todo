@@ -47,8 +47,12 @@ function render() {
 btnNode.addEventListener('click', () => {
     const text = inputNode.value;
 
-    addTodo(text);
-    render();
+    if (text.length == 0) {
+        alert('Please, enter a task');
+    } else {
+        addTodo(text);
+        render();
+    }
 });
 
 todosNode.addEventListener('click', event => {
