@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do list</title>
+    <title>Todo List</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h1 class="title">Todo list app</h1>
-        <input type="text" name="todo" id="todo" class="js-input">
-        <button class="js-btn">Add task</button>
+    <header>
+        <img src="./img/todoLogo.svg" alt="todoLogo">
+    </header>
+    <div class="main">
+        <input type="text" name="todo" placeholder="Add a new Task" id="todo" class="js-input">
+        <button class="js-btn">
+            Completed
+            <i class="icon-plus"></i>
+        </button>
         <div class="js-todos"></div>
     </div>
 

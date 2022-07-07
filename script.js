@@ -32,8 +32,11 @@ function render() {
 
         html += `
             <div>
+                <input type="checkbox" name="checkbox" id="check">
                 ${todo.text}
-                <button data-id="${todo.id}">Completed</button>
+                <button data-id="${todo.id}">
+                    <i class="icon-trash"></i>
+                </button>
             </div>
         `;
     });
