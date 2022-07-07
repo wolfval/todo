@@ -55,6 +55,19 @@ btnNode.addEventListener('click', () => {
     }
 });
 
+inputNode.addEventListener('keyup', event => {
+    if (event.key === 'Enter') {
+        
+        const text = inputNode.value;
+        if (text.length == 0) {
+            alert('Please, enter a task');
+        } else {
+            addTodo(text);
+            render();
+        }
+    } 
+});
+
 todosNode.addEventListener('click', event => {
     if (event.target.tagName !== 'BUTTON') {
         return;
