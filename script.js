@@ -12,6 +12,8 @@ function addTodo(text) {
     };
 
     todos.push(todo);
+
+    inputNode.value = '';
 }
 
 function deleteTodo(id) {
@@ -32,11 +34,9 @@ function render() {
 
         html += `
             <div class="todo">
-                <button id="check" class="check"></button>
-                <span>${todo.text}</span>
-                <button data-id="${todo.id}" class="delete">
-                    <i class="icon-trash"></i>
-                </button>
+                <input type="checkbox" id="check" class="check">
+                <span id="text">${todo.text}</span>
+                <button data-id="${todo.id}" class="delete"></button>
             </div>
         `;
     });

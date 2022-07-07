@@ -37,7 +37,7 @@ button {
     .todo-input {
         width: 595px;
         height: 53px;
-        padding: 0 15px;
+        padding: 0 20px;
         background-color: #262626;
         border-radius: 5px;
         border: none;
@@ -77,11 +77,9 @@ button {
             .check {
                 height: 22px;
                 width: 22px;
-                border-radius: 50%;
-                background: none;
-                border: 2px solid #4ea8de;
-                &:focus {
-                    background: #4ea8de;
+                cursor: pointer;
+                &:checked {
+                    background-color: #7d42cb;
                 }
             }
             span {
@@ -90,16 +88,19 @@ button {
                 align-items: flex-start;
             }
             .delete {
+                height: 23px;
                 background-color: inherit;
-                .icon-trash {
+                &::after {
+                    content: "\e900";
+                    font-family: 'icomoon';
                     font-size: 23px;
                     color: #808080;
-                    &:hover {
-                        color: #df4040;
-                        transition: .2s;
-                    }
                 }
             }
         }
     }
+}
+
+.completed {
+    text-decoration: line-through;
 }
