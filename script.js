@@ -1,6 +1,6 @@
-const todosNode = document.querySelector('.js-todos');
-const inputNode = document.querySelector('.js-input');
-const btnNode = document.querySelector('.js-btn');
+const todosNode = document.querySelector('.todos');
+const inputNode = document.querySelector('.todo-input');
+const btnNode = document.querySelector('.add-btn');
 
 let todos = [];
 
@@ -31,10 +31,10 @@ function render() {
         }; 
 
         html += `
-            <div>
-                <input type="checkbox" name="checkbox" id="check">
-                ${todo.text}
-                <button data-id="${todo.id}">
+            <div class="todo">
+                <button id="check" class="check"></button>
+                <span>${todo.text}</span>
+                <button data-id="${todo.id}" class="delete">
                     <i class="icon-trash"></i>
                 </button>
             </div>
