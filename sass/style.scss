@@ -62,7 +62,7 @@ button {
         }
     }
     .todos {
-        margin-top: 50px;
+        margin-top: 20px;
         .todo {
             width: 100%;
             min-height: 58px;
@@ -97,6 +97,36 @@ button {
                     color: #808080;
                 }
             }
+        }
+    }
+    .counters {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        &__item {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        &__created {
+            color: #4ea8de;
+        }
+        &__done {
+            color: #8284fa;
+        }
+        span {
+            height: 20px;
+            padding: 2px 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 10px;
+            font-size: .75rem;
+            background-color: #333333;
+            border-radius: 14px;
+            color: #d9d9d9;
         }
     }
 }
